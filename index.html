@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070606">
+<title>Glam with Suhana — Professional Makeup Artist</title>
+<meta name="description" content="Enhancing Your Beauty, Creating Your Perfect Look. Bridal, engagement, party and reception makeup, hairstyling, saree draping and beauty care by Suhana in Hariharganj.">
+<meta property="og:title" content="Glam with Suhana — Professional Makeup Artist">
+<meta property="og:description" content="Bridal, engagement, party and reception makeup, hairstyling and saree draping. Book your appointment today!">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+
+    /* Fixed brand palette: the design is black + champagne gold + beige in any theme */
+    --page: #070606;
+    --gold: #c9a96a;
+    --gold-hi: #f1e2b9;
+    --gold-lo: #9a7a3f;
+    --gold-grad: linear-gradient(100deg, #9a7a3f 0%, #e9d5a3 26%, #c9a96a 50%, #f4e7c2 74%, #a58445 100%);
+    --black: #070606;
+    --beige: #eadfcb;
+    --ivory: #fbf7f0;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: "Jost", "Helvetica Neue", Arial, sans-serif;
+    --gutter: clamp(16px, 4vw, 48px);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; }
+  *, *::before, *::after { box-sizing: inherit; }
+  body { margin: 0; background: var(--page); color: var(--ivory); font-family: var(--sans); }
+  h1, h2, p, ul { margin: 0; }
+
+  .wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+  .sp, .sprig { position: absolute; pointer-events: none; }
+  .sp { color: var(--gold-hi); }
+  .sprig { color: var(--gold); }
+
+  /* ---------- 1. Header ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: clamp(40px, 6.5vw, 84px) 0 clamp(38px, 5.5vw, 72px);
+    background:
+      radial-gradient(ellipse 60% 100% at 50% 0%, rgba(201, 169, 106, .26), transparent 72%),
+      var(--black);
+  }
+  .hero h1 { font-weight: 500; }
+  .pre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .9em;
+    font: 500 clamp(11px, 2.3vw, 22px)/1 var(--sans);
+    letter-spacing: .7em;
+    padding-left: .7em;
+    color: var(--gold-hi);
+  }
+  .pre svg { width: 1.15em; height: 1.15em; flex: none; color: var(--gold-hi); }
+  .name {
+    display: block;
+    margin-top: .1em;
+    font: 600 clamp(58px, 14vw, 170px)/1 var(--serif);
+    letter-spacing: .12em;
+    padding-left: .12em;
+    background: var(--gold-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .tagline {
+    margin-top: clamp(10px, 1.8vw, 22px);
+    font: italic 500 clamp(19px, 3.2vw, 36px)/1.25 var(--serif);
+    color: var(--ivory);
+    opacity: .92;
+    text-wrap: balance;
+  }
+
+  /* ---------- 2. Services around the model ---------- */
+  .show {
+    background:
+      radial-gradient(ellipse 55% 60% at 50% 60%, rgba(201, 169, 106, .16), transparent 72%),
+      var(--black);
+    padding-top: clamp(18px, 3vw, 40px);
+  }
+  .show-grid {
+    display: grid;
+    grid-template-columns: 1fr clamp(280px, 34vw, 400px) 1fr;
+    grid-template-areas:
+      "label label label"
+      "l arch r";
+    column-gap: clamp(20px, 3vw, 44px);
+    align-items: center;
+  }
+  .label {
+    grid-area: label;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(12px, 2.4vw, 28px);
+    margin-bottom: clamp(26px, 4.4vw, 52px);
+    font: italic 500 clamp(24px, 3.4vw, 38px)/1 var(--serif);
+    color: var(--gold-hi);
+  }
+  .label::before, .label::after {
+    content: "";
+    width: clamp(48px, 12vw, 140px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+  }
+  .label::after { transform: scaleX(-1); }
+
+  .svc { list-style: none; padding: 0; display: flex; flex-direction: column; }
+  .svc-l { grid-area: l; text-align: right; padding-right: clamp(18px, 2.6vw, 30px); }
+  .svc-r { grid-area: r; text-align: left; padding-left: clamp(18px, 2.6vw, 30px); }
+  .svc li {
+    padding: clamp(18px, 3.4vw, 42px) 0;
+    font: 600 clamp(20px, 2.2vw, 26px)/1.15 var(--serif);
+    letter-spacing: .03em;
+    color: var(--ivory);
+    border-bottom: 1px solid rgba(201, 169, 106, .32);
+  }
+  .svc li:first-child { padding-top: 0; }
+  .svc li:last-child { border-bottom: none; padding-bottom: 0; }
+  .svc li span { position: relative; display: block; text-wrap: balance; }
+  .svc li span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .svc-l li span::after { right: clamp(-27px, -2.2vw, -19px); }
+  .svc-r li span::after { left: clamp(-27px, -2.2vw, -19px); }
+
+  .arch-wrap {
+    grid-area: arch;
+    position: relative;
+    align-self: end;
+    width: 100%;
+    aspect-ratio: 36 / 52;
+  }
+  .arch-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -11px -11px 0;
+    border: 1px solid rgba(201, 169, 106, .55);
+    border-bottom: none;
+    border-radius: 999px 999px 0 0;
+  }
+  .arch-frame {
+    position: absolute;
+    inset: 0;
+    padding: 4px 4px 0;
+    background: var(--gold-grad);
+    border-radius: 999px 999px 0 0;
+  }
+  .arch-in {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 999px 999px 0 0;
+    background: #0d0a08;
+  }
+  .arch-in svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+  /* ---------- 3. Also available ---------- */
+  .also {
+    position: relative;
+    overflow: hidden;
+    color: #33261b;
+    text-align: center;
+    padding: clamp(34px, 5.2vw, 68px) 0;
+    background:
+      radial-gradient(ellipse 65% 90% at 50% 0%, #fbf6ec, transparent 75%),
+      var(--beige);
+    border-top: 3px solid var(--gold);
+  }
+  .also-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(12px, 3vw, 34px);
+    margin-bottom: clamp(14px, 2.2vw, 26px);
+    font: italic 600 clamp(24px, 3.5vw, 40px)/1 var(--serif);
+    color: #2b1f15;
+  }
+  .also-head svg { width: 1.3em; height: 1.3em; flex: none; color: var(--gold-lo); }
+  .also-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 2.2vw, 26px);
+    font: 600 clamp(17px, 2.8vw, 32px)/1 var(--serif);
+    letter-spacing: .03em;
+    color: #3a2b1f;
+  }
+  .also-row + .also-row { margin-top: clamp(14px, 2.2vw, 26px); }
+  .also-row i {
+    width: .3em;
+    height: .3em;
+    background: var(--gold-lo);
+    transform: rotate(45deg);
+    flex: none;
+  }
+
+  /* ---------- 4. Contact + call to action ---------- */
+  .contact {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: clamp(38px, 5.6vw, 72px) 0 clamp(42px, 6vw, 80px);
+    background:
+      radial-gradient(ellipse 60% 90% at 50% 100%, rgba(201, 169, 106, .2), transparent 72%),
+      var(--black);
+  }
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px clamp(24px, 6vw, 72px);
+    font: 500 clamp(15px, 2.4vw, 26px)/1.2 var(--sans);
+    letter-spacing: .04em;
+    color: var(--ivory);
+  }
+  .info span { display: inline-flex; align-items: center; gap: .5em; }
+  .info svg { width: 1.25em; height: 1.25em; flex: none; color: var(--gold); }
+  .rule {
+    width: min(60%, 460px);
+    height: 1px;
+    margin: clamp(22px, 3.4vw, 40px) auto;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45em;
+    font: italic 500 clamp(22px, 3.7vw, 42px)/1.15 var(--serif);
+    color: var(--ivory);
+  }
+  .book svg { width: .95em; height: .95em; flex: none; color: var(--gold); }
+  .cta {
+    display: inline-block;
+    margin-top: clamp(18px, 2.8vw, 32px);
+    font: 600 clamp(15px, 2.8vw, 26px)/1 var(--sans);
+    letter-spacing: .35em;
+    padding: .66em 2.9em .62em calc(2.9em + .35em);
+    color: #140e08;
+    text-decoration: none;
+    background: var(--gold-grad);
+    border-radius: 999px;
+    box-shadow:
+      0 0 0 4px var(--black),
+      0 0 0 7px rgba(201, 169, 106, .85),
+      0 12px 36px rgba(201, 169, 106, .35);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 0 0 4px var(--black), 0 0 0 7px rgba(241, 226, 185, .95), 0 16px 44px rgba(201, 169, 106, .5); }
+  .cta:focus-visible { outline: 3px solid var(--gold-hi); outline-offset: 12px; }
+
+  /* ---------- Phones and narrow screens ---------- */
+  @media (max-width: 760px) {
+    .show { padding-bottom: clamp(38px, 9vw, 60px); }
+    .show-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "label label"
+        "arch arch"
+        "l r";
+      column-gap: 20px;
+      row-gap: 0;
+    }
+    .arch-wrap {
+      width: min(76vw, 330px);
+      justify-self: center;
+      margin: 12px 0 clamp(34px, 8vw, 52px);
+    }
+    .arch-wrap::before {
+      inset: -9px;
+      border-bottom: 1px solid rgba(201, 169, 106, .55);
+      border-radius: 999px 999px 6px 6px;
+    }
+    .arch-frame { padding: 4px; border-radius: 999px 999px 6px 6px; }
+    .arch-in { border-radius: 999px 999px 4px 4px; }
+    .svc-l, .svc-r { text-align: center; padding: 0; align-self: start; }
+    .svc li { padding: 18px 0; font-size: clamp(19px, 5.2vw, 24px); }
+    .svc li:first-child { padding-top: 0; }
+    .svc li span::after { display: none; }
+  }
+  @media (max-width: 380px) {
+    .pre { letter-spacing: .5em; padding-left: .5em; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Shared symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="spark" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 0C12.8 7.2 16.8 11.2 24 12C16.8 12.8 12.8 16.8 12 24C11.2 16.8 7.2 12.8 0 12C7.2 11.2 11.2 7.2 12 0Z"/>
+    </symbol>
+    <symbol id="sprig" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 94C22 68 42 48 74 32"/>
+        <path d="M22 74C12 66 10 56 16 50C26 54 28 66 22 74Z"/>
+        <path d="M34 60C42 52 52 52 58 58C52 66 42 66 34 60Z"/>
+        <path d="M50 48C50 38 58 32 66 32C66 42 60 48 50 48Z"/>
+        <path d="M14 84C6 80 2 72 4 66C12 68 16 76 14 84Z"/>
+        <g transform="translate(82 24)">
+          <ellipse cx="0" cy="-9" rx="4.6" ry="8.4"/>
+          <ellipse cx="0" cy="-9" rx="4.6" ry="8.4" transform="rotate(72)"/>
+          <ellipse cx="0" cy="-9" rx="4.6" ry="8.4" transform="rotate(144)"/>
+          <ellipse cx="0" cy="-9" rx="4.6" ry="8.4" transform="rotate(216)"/>
+          <ellipse cx="0" cy="-9" rx="4.6" ry="8.4" transform="rotate(288)"/>
+          <circle r="2.6" fill="currentColor"/>
+        </g>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<main>
+
+  <!-- 1. Name + tagline -->
+  <header class="hero">
+    <svg class="sprig" style="left:-1%;top:-1%;width:clamp(84px,15vw,210px);height:clamp(84px,15vw,210px);transform:rotate(90deg);opacity:.75" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="sprig" style="right:-1%;top:-1%;width:clamp(84px,15vw,210px);height:clamp(84px,15vw,210px);transform:rotate(180deg);opacity:.75" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="sp" style="left:20%;top:64%;width:clamp(10px,1.6vw,20px);height:clamp(10px,1.6vw,20px);opacity:.8" aria-hidden="true"><use href="#spark"/></svg>
+    <svg class="sp" style="right:19%;top:22%;width:clamp(8px,1.2vw,16px);height:clamp(8px,1.2vw,16px);opacity:.7" aria-hidden="true"><use href="#spark"/></svg>
+    <svg class="sp" style="right:12%;top:72%;width:clamp(11px,1.8vw,22px);height:clamp(11px,1.8vw,22px);opacity:.85" aria-hidden="true"><use href="#spark"/></svg>
+    <div class="wrap">
+      <h1>
+        <span class="pre"><svg aria-hidden="true"><use href="#spark"/></svg>GLAM WITH<svg aria-hidden="true"><use href="#spark"/></svg></span>
+        <span class="name">SUHANA</span>
+      </h1>
+      <p class="tagline">“Enhancing Your Beauty, Creating Your Perfect Look”</p>
+    </div>
+  </header>
+
+  <!-- 2. Services around the bridal model -->
+  <section class="show" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="show-grid">
+        <h2 class="label" id="services-title">Our Services</h2>
+
+        <ul class="svc svc-l">
+          <li><span>Bridal Makeup</span></li>
+          <li><span>Engagement Makeup</span></li>
+          <li><span>Party Makeup</span></li>
+        </ul>
+
+        <div class="arch-wrap">
+          <div class="arch-frame">
+            <div class="arch-in">
+<svg viewBox="0 0 300 420" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of a bride with elegant makeup, gold jewellery and a blush veil">
+                <defs>
+                  <radialGradient id="bgGlow" cx="50%" cy="38%" r="65%">
+                    <stop offset="0" stop-color="#4a3626"/>
+                    <stop offset=".55" stop-color="#1c1410"/>
+                    <stop offset="1" stop-color="#0a0807"/>
+                  </radialGradient>
+                  <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f3d2b8"/>
+                    <stop offset="1" stop-color="#e2b08e"/>
+                  </linearGradient>
+                  <linearGradient id="skinDeep" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e6bb9c"/>
+                    <stop offset="1" stop-color="#d59f7c"/>
+                  </linearGradient>
+                  <linearGradient id="veil" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f6dcda"/>
+                    <stop offset="1" stop-color="#e4b3b6"/>
+                  </linearGradient>
+                  <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#f4e6bf"/>
+                    <stop offset=".5" stop-color="#c9a96a"/>
+                    <stop offset="1" stop-color="#8f6f36"/>
+                  </linearGradient>
+                  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
+                </defs>
+
+                <rect width="300" height="420" fill="url(#bgGlow)"/>
+                <circle cx="150" cy="176" r="124" fill="none" stroke="#c9a96a" stroke-width="1" opacity=".35"/>
+                <circle cx="150" cy="176" r="136" fill="none" stroke="#c9a96a" stroke-width=".6" opacity=".2"/>
+                <g fill="#f1e2b9">
+                  <circle cx="44" cy="80" r="2.2" opacity=".5"/>
+                  <circle cx="258" cy="120" r="3" opacity=".35"/>
+                  <circle cx="30" cy="190" r="1.6" opacity=".45"/>
+                  <circle cx="272" cy="52" r="1.8" opacity=".5"/>
+                  <circle cx="232" cy="30" r="2.4" opacity=".3"/>
+                </g>
+
+                <!-- Back drape of the blush dupatta -->
+                <path d="M150 66C74 66 44 146 38 236C34 316 18 374 2 420L298 420C282 374 266 316 262 236C256 146 226 66 150 66Z" fill="url(#veil)" opacity=".55"/>
+                <path d="M150 66C74 66 44 146 38 236C34 316 18 374 2 420" fill="none" stroke="#c9a96a" stroke-width="1.4" opacity=".8"/>
+                <path d="M150 66C226 66 256 146 262 236C266 316 282 374 298 420" fill="none" stroke="#c9a96a" stroke-width="1.4" opacity=".8"/>
+
+                <!-- Hair, back -->
+                <path d="M150 84C96 84 88 140 90 190C92 230 104 250 118 258L182 258C196 250 208 230 210 190C212 140 204 84 150 84Z" fill="#1d130e"/>
+                <!-- Bun -->
+                <ellipse cx="150" cy="82" rx="30" ry="21" fill="#1d130e"/>
+                <path d="M126 76C136 68 164 68 174 76" fill="none" stroke="#3a281d" stroke-width="2" opacity=".8"/>
+
+                <!-- Neck, shoulders -->
+                <path d="M30 376C34 346 70 330 112 314C128 308 133 300 133 288L167 288C167 300 172 308 188 314C230 330 266 346 270 376L270 420L30 420Z" fill="url(#skinDeep)"/>
+                <path d="M133 236L133 292C133 304 116 310 100 316L200 316C184 310 167 304 167 292L167 236Z" fill="url(#skin)"/>
+                <path d="M133 244Q150 264 167 244L167 264Q150 276 133 264Z" fill="#b97b58" opacity=".3"/>
+
+                <!-- Gown -->
+                <path d="M30 378C70 350 110 346 130 358C140 374 160 374 170 358C190 346 230 350 270 378L270 420L30 420Z" fill="#f5ede1"/>
+                <path d="M30 378C70 350 110 346 130 358C140 374 160 374 170 358C190 346 230 350 270 378" fill="none" stroke="#c9a96a" stroke-width="1.6"/>
+                <path d="M46 392C84 366 116 366 132 378M254 392C216 366 184 366 168 378" fill="none" stroke="#e2cfa0" stroke-width=".9" opacity=".8"/>
+
+                <!-- Face -->
+                <path d="M150 104C188 104 202 138 199 172C196 212 176 246 150 252C124 246 104 212 101 172C98 138 112 104 150 104Z" fill="url(#skin)"/>
+                <ellipse cx="150" cy="140" rx="30" ry="14" fill="#fff3e6" opacity=".22" filter="url(#soft)"/>
+                <ellipse cx="121" cy="205" rx="17" ry="11" fill="#e8808f" opacity=".38" filter="url(#soft)"/>
+                <ellipse cx="179" cy="205" rx="17" ry="11" fill="#e8808f" opacity=".38" filter="url(#soft)"/>
+
+                <!-- Hair, front with centre parting -->
+                <path d="M150 98C112 98 96 134 98 178C104 150 118 126 150 122C182 126 196 150 202 178C204 134 188 98 150 98Z" fill="#1d130e"/>
+                <path d="M150 98L150 122" stroke="#4a3527" stroke-width="1.6"/>
+
+                <!-- Brows -->
+                <path d="M113 152Q129 138 148 147" fill="none" stroke="#2b1a12" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M152 147Q171 138 187 152" fill="none" stroke="#2b1a12" stroke-width="3.2" stroke-linecap="round"/>
+
+                <!-- Eyeshadow, eyes, liner -->
+                <path d="M115 164Q131 148 148 163Q131 173 115 164Z" fill="#c79a62" opacity=".6"/>
+                <path d="M152 163Q169 148 185 164Q169 173 152 163Z" fill="#c79a62" opacity=".6"/>
+                <path d="M117 166Q132 177 147 166" fill="none" stroke="#2a1810" stroke-width="2.4" stroke-linecap="round"/>
+                <path d="M153 166Q168 177 183 166" fill="none" stroke="#2a1810" stroke-width="2.4" stroke-linecap="round"/>
+                <path d="M117 166L110 161M183 166L190 161" fill="none" stroke="#2a1810" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M124 172L122 177M132 174L131 179M140 172L140 177M160 172L160 177M168 174L169 179M176 172L178 177" stroke="#2a1810" stroke-width="1.3" stroke-linecap="round" opacity=".85"/>
+                <ellipse cx="131" cy="157" rx="8" ry="2.4" fill="#fff0d6" opacity=".55"/>
+                <ellipse cx="169" cy="157" rx="8" ry="2.4" fill="#fff0d6" opacity=".55"/>
+
+                <!-- Nose -->
+                <path d="M151 172L151 194" stroke="#fde6d2" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+                <path d="M142 201Q150 207 158 201" fill="none" stroke="#b98466" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+
+                <!-- Lips -->
+                <path d="M132 224Q141 217 150 221Q159 217 168 224Q150 230 132 224Z" fill="#a52d4c"/>
+                <path d="M132 224Q150 232 168 224Q162 240 150 241Q138 240 132 224Z" fill="#c23f5f"/>
+                <ellipse cx="150" cy="234" rx="7" ry="2" fill="#fff" opacity=".3"/>
+
+                <!-- Front veil drapes -->
+                <path d="M104 96C84 130 80 190 82 250C84 300 70 350 44 420L90 420C104 360 114 320 116 290C112 240 108 170 118 128Z" fill="#f3d3d3" opacity=".42" stroke="#c9a96a" stroke-width="1" />
+                <path d="M196 96C216 130 220 190 218 250C216 300 230 350 256 420L210 420C196 360 186 320 184 290C188 240 192 170 182 128Z" fill="#f3d3d3" opacity=".42" stroke="#c9a96a" stroke-width="1" />
+
+                <!-- Jasmine on the bun -->
+                <g fill="#fbf6ee" stroke="#e2cfa0" stroke-width=".6">
+                  <circle cx="122" cy="86" r="5.2"/><circle cx="133" cy="73" r="5.2"/><circle cx="150" cy="68" r="5.6"/>
+                  <circle cx="167" cy="73" r="5.2"/><circle cx="178" cy="86" r="5.2"/>
+                </g>
+                <g fill="#c9a96a">
+                  <circle cx="122" cy="86" r="1.6"/><circle cx="133" cy="73" r="1.6"/><circle cx="150" cy="68" r="1.8"/>
+                  <circle cx="167" cy="73" r="1.6"/><circle cx="178" cy="86" r="1.6"/>
+                </g>
+
+                <!-- Maang tikka -->
+                <path d="M150 122L150 137" stroke="url(#goldG)" stroke-width="1.6"/>
+                <path d="M150 137C144 143 144 151 150 155C156 151 156 143 150 137Z" fill="url(#goldG)"/>
+                <circle cx="150" cy="146" r="2.4" fill="#fbf6ee"/>
+
+                <!-- Jhumka earrings -->
+                <g fill="url(#goldG)">
+                  <circle cx="100" cy="198" r="3.6"/>
+                  <path d="M91 208Q100 191 109 208Z"/>
+                  <circle cx="93" cy="215" r="2.4"/><circle cx="100" cy="217" r="2.4"/><circle cx="107" cy="215" r="2.4"/>
+                  <circle cx="200" cy="198" r="3.6"/>
+                  <path d="M191 208Q200 191 209 208Z"/>
+                  <circle cx="193" cy="215" r="2.4"/><circle cx="200" cy="217" r="2.4"/><circle cx="207" cy="215" r="2.4"/>
+                </g>
+
+                <!-- Necklace -->
+                <path d="M127 274Q150 292 173 274" fill="none" stroke="url(#goldG)" stroke-width="3" stroke-linecap="round"/>
+                <path d="M108 300Q150 342 192 300" fill="none" stroke="url(#goldG)" stroke-width="2.4" stroke-linecap="round"/>
+                <path d="M150 326C143 334 143 342 150 347C157 342 157 334 150 326Z" fill="url(#goldG)"/>
+                <circle cx="150" cy="335" r="2.6" fill="#a52d4c"/>
+
+                <!-- Sparkles -->
+                <g fill="#f1e2b9">
+                  <path d="M60 130C60.6 135 63 137.4 68 138C63 138.6 60.6 141 60 146C59.4 141 57 138.6 52 138C57 137.4 59.4 135 60 130Z" opacity=".85"/>
+                  <path d="M244 96C244.5 100 246.5 102 250.5 102.5C246.5 103 244.5 105 244 109C243.5 105 241.5 103 237.5 102.5C241.5 102 243.5 100 244 96Z" opacity=".8"/>
+                  <path d="M236 250C236.4 253.4 238 255 241.4 255.4C238 255.8 236.4 257.4 236 260.8C235.6 257.4 234 255.8 230.6 255.4C234 255 235.6 253.4 236 250Z" opacity=".7"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <ul class="svc svc-r">
+          <li><span>Reception Makeup</span></li>
+          <li><span>Hairstyling</span></li>
+          <li><span>Saree Draping</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Other services -->
+  <section class="also" aria-labelledby="also-title">
+    <svg class="sprig" style="left:1%;bottom:-2%;width:clamp(64px,11vw,150px);height:clamp(64px,11vw,150px);color:#b8975a;opacity:.7" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="sprig" style="right:1%;bottom:-2%;width:clamp(64px,11vw,150px);height:clamp(64px,11vw,150px);color:#b8975a;opacity:.7;transform:scaleX(-1)" aria-hidden="true"><use href="#sprig"/></svg>
+    <div class="wrap">
+      <h2 class="also-head" id="also-title">
+        <!-- makeup brush -->
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 42L26 22" stroke-width="2.6"/>
+          <path d="M24 24L30 18" stroke-width="5"/>
+          <path d="M30 18C32 10 38 6 44 4C42 10 38 16 30 18Z" fill="currentColor" fill-opacity=".2"/>
+        </svg>
+        Also available
+        <!-- lipstick -->
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="15" y="28" width="18" height="14" rx="1.5"/>
+          <rect x="17" y="21" width="14" height="7" rx="1"/>
+          <path d="M18 21L18 12L30 6L30 21Z" fill="currentColor" fill-opacity=".2"/>
+        </svg>
+      </h2>
+      <p class="also-row"><span>Clean Up</span><i></i><span>Detan</span><i></i><span>Facial</span><i></i><span>Threading</span></p>
+      <p class="also-row"><span>Waxing</span><i></i><span>Pedicure</span><i></i><span>Manicure</span></p>
+    </div>
+  </section>
+
+  <!-- 4. Contact + call to action -->
+  <footer class="contact" id="contact">
+    <svg class="sp" style="left:8%;top:14%;width:clamp(10px,1.6vw,20px);height:clamp(10px,1.6vw,20px);opacity:.8" aria-hidden="true"><use href="#spark"/></svg>
+    <svg class="sp" style="right:9%;top:50%;width:clamp(12px,2vw,26px);height:clamp(12px,2vw,26px);opacity:.85" aria-hidden="true"><use href="#spark"/></svg>
+    <svg class="sp" style="left:14%;bottom:12%;width:clamp(8px,1.2vw,16px);height:clamp(8px,1.2vw,16px);opacity:.7" aria-hidden="true"><use href="#spark"/></svg>
+    <div class="wrap">
+      <div class="info">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22C12 22 19 15.5 19 10A7 7 0 0 0 5 10C5 15.5 12 22 12 22Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          Hariharganj
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor"/></svg>
+          <a href="https://www.instagram.com/glam__with__suhana/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">@glam__with__suhana</a>
+        </span>
+      </div>
+      <div class="rule"></div>
+      <p class="book">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10H20.5M8 3V7M16 3V7"/></svg>
+        Book Your Appointment Today!
+      </p>
+      <a class="cta" href="https://www.instagram.com/glam__with__suhana/" target="_blank" rel="noopener">BOOK NOW</a>
+    </div>
+  </footer>
+
+</main>
+</body>
+</html>
